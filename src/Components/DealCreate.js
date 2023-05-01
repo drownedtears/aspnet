@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button, Checkbox, Form, Input } from "antd"
 
 const DealCreate = ({ addDeal }) => {
   const handleSubmit = (e) => {
@@ -40,18 +41,18 @@ const DealCreate = ({ addDeal }) => {
   return (
     <React.Fragment>
       <h3>Создание новой сделки</h3>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <div className="price-input">
           <label>Цена: </label>
-          <input type="text" id="price" name="price" placeholder="Введите цену" />
+          <Input type="text" id="price" name="price" placeholder="Введите цену" />
         </div>
         <div className="item-input">
           <label>Товар: </label>
-          <input type="text" id="item" name="item" placeholder="Введите название товара" />
+          <Input type="text" id="item" name="item" placeholder="Введите название товара" />
         </div>
         
-        <button type="submit">Создать</button>
-      </form>
+        <Button type="primary">Создать</Button>
+      </Form>
     </React.Fragment >
   )
 }

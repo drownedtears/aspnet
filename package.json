@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "antd": "^5.4.6",
     "react-router-dom": "^6.10.0"
   },
   "proxy": "https://localhost:7074"

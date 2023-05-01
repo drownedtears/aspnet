@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './Style.css'
+import { Button, Checkbox, Form, Input } from "antd"
 
 const Deal = ({ user, deals, setDeals, removeDeal }) => {
   console.log("role")
@@ -46,8 +47,8 @@ const Deal = ({ user, deals, setDeals, removeDeal }) => {
   <strong>
     #{dealId}: {item} - {price}
   </strong>
-  {user.userRole == "admin" ? (
-  <button onClick={() => deleteItem({ dealId })}>Удалить</button>
+  {user.userRole === "admin" ? (
+  <Button type="default" onClick={() => deleteItem({ dealId })}>Удалить</Button>
   ) : (
   ""
   )}
