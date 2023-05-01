@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import './Style.css'
 
 const Deal = ({ user, deals, setDeals, removeDeal }) => {
+  console.log("role")
+  console.log(user)
   useEffect(() => {
     const getDeals = async () => {
       const requestOptions = {
@@ -44,7 +46,7 @@ const Deal = ({ user, deals, setDeals, removeDeal }) => {
   <strong>
     #{dealId}: {item} - {price}
   </strong>
-  {user.isAuthenticated ? (
+  {user.userRole == "admin" ? (
   <button onClick={() => deleteItem({ dealId })}>Удалить</button>
   ) : (
   ""

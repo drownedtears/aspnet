@@ -4,6 +4,8 @@ const DealCreate = ({ addDeal }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    
+
     const deal = { 
       price: e.target.querySelector("#price").value,
       item: e.target.querySelector("#item").value

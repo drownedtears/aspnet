@@ -23,7 +23,7 @@ const logIn = async (event) => {
         .then((response) => {
         console.log(response.status)
         response.status === 200 &&
-        setUser({ isAuthenticated: true, userName: "" })
+        setUser({ isAuthenticated: true, userName: "", userRole: "" })
         return response.json()
         })
         .then(
@@ -34,7 +34,7 @@ const logIn = async (event) => {
             typeof data !== "undefined" &&
             typeof data.userName !== "undefined"
             ) {
-            setUser({ isAuthenticated: true, userName: data.userName })
+            setUser({ isAuthenticated: true, userName: data.userName, userRole: data.userRole })
             navigate("/")
             }
             typeof data !== "undefined" &&
